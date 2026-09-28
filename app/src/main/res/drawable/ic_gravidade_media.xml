@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Inseto de gravidade média (3) -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="40dp"
+    android:height="40dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- corpo -->
+    <path
+        android:fillColor="@color/gravidade_media"
+        android:pathData="M7.6,14.5 A4.4,5 0 0 1 16.4,14.5 A4.4,5 0 0 1 7.6,14.5 Z" />
+    <!-- tórax -->
+    <path
+        android:fillColor="@color/gravidade_media"
+        android:pathData="M9.4,9.9 A2.6,2.4 0 0 1 14.6,9.9 A2.6,2.4 0 0 1 9.4,9.9 Z" />
+    <!-- cabeça -->
+    <path
+        android:fillColor="@color/gravidade_media"
+        android:pathData="M10.3,6.6 A1.7,1.7 0 0 1 13.7,6.6 A1.7,1.7 0 0 1 10.3,6.6 Z" />
+    <!-- patas -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M8.2,11.6 L5,9.4 M7.7,14.5 L4.4,14.5 M8.2,17.4 L5,19.6 M15.8,11.6 L19,9.4 M16.3,14.5 L19.6,14.5 M15.8,17.4 L19,19.6"
+        android:strokeColor="@color/gravidade_media"
+        android:strokeLineCap="round"
+        android:strokeWidth="1.1" />
+    <!-- antenas -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M10.8,5.2 L9.4,3.2 M13.2,5.2 L14.6,3.2"
+        android:strokeColor="@color/gravidade_media"
+        android:strokeLineCap="round"
+        android:strokeWidth="1" />
+</vector>

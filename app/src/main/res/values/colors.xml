@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Identidade visual: caçador de bugs (verde detector sobre fundo escuro) -->
+    <color name="fundo_app">#0C1410</color>
+    <color name="fundo_painel">#16281D</color>
+    <color name="verde_neon">#69F0AE</color>
+    <color name="verde_mira">#3DA96A</color>
+    <color name="texto_principal">#E8F5E9</color>
+    <color name="texto_secundario">#9CC5A8</color>
+
+    <!-- Gravidade -->
+    <color name="gravidade_baixa">#66BB6A</color>
+    <color name="gravidade_media">#FFB300</color>
+    <color name="gravidade_alta">#FF5252</color>
+
+    <!-- Cartão: aberto x corrigido -->
+    <color name="cartao_aberto">#16281D</color>
+    <color name="cartao_corrigido">#0D3B22</color>
+    <color name="badge_aberto_fundo">#3A2E12</color>
+    <color name="badge_aberto_texto">#FFD54F</color>
+    <color name="badge_corrigido_fundo">#0A5C31</color>
+    <color name="badge_corrigido_texto">#A5FFD1</color>
+
+    <!-- Ícone do aplicativo -->
+    <color name="icone_fundo">#0C1410</color>
+</resources>

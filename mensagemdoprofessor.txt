@@ -1,0 +1,255 @@
+Desenvolva um aplicativo para cadastrar e acompanhar falhas encontradas em sistemas. O usuário deverá registrar novos bugs, visualizar os registros em uma lista rolável, marcar problemas como corrigidos e excluir registros.
+
+O aplicativo deverá ser desenvolvido em Java e possuir uma única tela, mantendo o foco na criação e atualização dinâmica da RecyclerView.
+Interface principal
+
+Utilize um ConstraintLayout como elemento raiz. A tela deverá conter:
+
+    Título e identidade visual do aplicativo;
+
+    Formulário para cadastrar um bug;
+
+    Painel com total de registros, bugs abertos, corrigidos e pontuação;
+
+    RecyclerView com os bugs cadastrados;
+
+    Mensagem para indicar quando a lista estiver vazia.
+
+A RecyclerView deverá ocupar todo o espaço restante da tela, utilizando altura 0dp e LinearLayoutManager.
+
+Não coloque a RecyclerView dentro de NestedScrollView ou ScrollView, pois ela já possui sua própria rolagem.
+Cadastro do bug
+
+O formulário deverá possuir:
+
+    Título do problema;
+
+    Módulo ou tela onde o problema ocorreu;
+
+    Descrição do erro;
+
+    SeekBar para definir a gravidade entre 1 e 5;
+
+    TextView atualizada em tempo real com a gravidade;
+
+    Botão Registrar bug.
+
+Antes do cadastro, valide:
+
+    Título obrigatório;
+
+    Módulo obrigatório;
+
+    Descrição com pelo menos dez caracteres.
+
+Quando o cadastro for válido:
+
+    Crie um novo objeto;
+
+    Adicione-o ao final do ArrayList;
+
+    Atualize somente o novo item com notifyItemInserted;
+
+    Role a lista automaticamente até o registro inserido;
+
+    Limpe o formulário;
+
+    Atualize os contadores.
+
+Classe de modelo
+
+Crie uma classe Bug contendo:
+
+    Código;
+
+    Título;
+
+    Módulo;
+
+    Descrição;
+
+    Gravidade;
+
+    Status de resolução;
+
+    Identificador da imagem.
+
+O código deverá ser gerado automaticamente, como:
+
+    BUG-001;
+
+    BUG-002;
+
+    BUG-003.
+
+A lista deverá iniciar vazia e ser preenchida pelos cadastros realizados no formulário.
+
+Não é necessário salvar os registros após o aplicativo ser fechado.
+Cartão da RecyclerView
+
+Crie um layout XML reutilizável para representar um único bug. Cada cartão deverá exibir:
+
+    Ícone ou imagem;
+
+    Código;
+
+    Título;
+
+    Módulo;
+
+    Gravidade;
+
+    Status: Aberto ou Corrigido;
+
+    Parte da descrição do problema.
+
+A gravidade deverá possuir identificação visual:
+
+    Gravidade 1 e 2: baixa;
+
+    Gravidade 3: média;
+
+    Gravidade 4 e 5: alta ou crítica.
+
+Um bug corrigido também deverá apresentar aparência diferente de um bug aberto.
+
+Como os cartões serão reciclados, o método bind deverá sempre atualizar textos, imagem, cores e status visual. Nenhum item poderá manter características de outro registro durante a rolagem.
+Adapter e ViewHolder
+
+Implemente:
+
+    Classe BugAdapter;
+
+    Classe BugViewHolder;
+
+    View Binding no layout do item;
+
+    onCreateViewHolder;
+
+    onBindViewHolder;
+
+    getItemCount;
+
+    Interface para clique;
+
+    Interface para clique longo.
+
+Os eventos deverão encaminhar o objeto Bug, e não uma posição armazenada.
+Marcar como corrigido
+
+Ao tocar em um cartão:
+
+    Um bug aberto deverá passar para corrigido;
+
+    Um bug corrigido deverá voltar para aberto;
+
+    Apenas o cartão alterado deverá ser atualizado com notifyItemChanged;
+
+    Os contadores e a pontuação deverão ser recalculados.
+
+Cada bug corrigido concederá pontos de acordo com sua gravidade:
+
+Pontuação = gravidade × 10
+
+Exemplo: um bug de gravidade 4 corrigido vale 40 pontos.
+Excluir um registro
+
+Ao manter um cartão pressionado:
+
+    O registro deverá ser removido do ArrayList;
+
+    A remoção deverá utilizar notifyItemRemoved;
+
+    Os contadores e a pontuação deverão ser atualizados;
+
+    Uma mensagem deverá informar qual bug foi removido.
+
+Painel de acompanhamento
+
+O painel deverá apresentar:
+
+    Total de bugs;
+
+    Quantidade de bugs abertos;
+
+    Quantidade de bugs corrigidos;
+
+    Pontuação atual do caçador de bugs.
+
+Quando a lista estiver vazia, mostre uma mensagem como:
+
+“Nenhum bug registrado. O sistema parece perfeito... por enquanto!”
+
+A mensagem deverá desaparecer após o primeiro cadastro e reaparecer caso todos os registros sejam removidos.
+Requisitos obrigatórios
+
+O projeto deverá utilizar:
+
+    Java e layouts XML;
+
+    Classe de modelo Bug;
+
+    ArrayList;
+
+    RecyclerView;
+
+    LinearLayoutManager;
+
+    Layout XML reutilizável para o cartão;
+
+    Adapter e ViewHolder;
+
+    View Binding;
+
+    Clique e clique longo;
+
+    notifyItemInserted;
+
+    notifyItemChanged;
+
+    notifyItemRemoved;
+
+    Textos fixos em strings.xml;
+
+    Cores em colors.xml;
+
+    IDs claros e expressivos;
+
+    contentDescription nas imagens;
+
+    inputType adequado nos campos.
+
+Não utilize:
+
+    ListView;
+
+    findViewById;
+
+    android:onClick;
+
+    Banco de dados;
+
+    Acesso à internet;
+
+    RecyclerView dentro de ScrollView;
+
+    notifyDataSetChanged para alterações individuais.
+
+Personalização
+
+Cada estudante deverá personalizar:
+
+    Nome do aplicativo;
+
+    Ícone;
+
+    Cores;
+
+    Aparência dos cartões;
+
+    Indicadores de gravidade;
+
+    Mensagens apresentadas ao usuário.
+
+A estrutura técnica deverá ser mantida, mas os projetos não deverão possuir interfaces visualmente idênticas.
+Consulte os slides da Aula 05 para revisar classe de modelo, RecyclerView, Adapter, ViewHolder, cliques e notificações pontuais.

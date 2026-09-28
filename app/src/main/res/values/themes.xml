@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TemaBugHunter" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/verde_neon</item>
+        <item name="colorOnPrimary">@color/fundo_app</item>
+        <item name="colorSecondary">@color/verde_neon</item>
+        <item name="colorOnSecondary">@color/fundo_app</item>
+        <item name="android:statusBarColor">@color/fundo_app</item>
+        <item name="android:navigationBarColor">@color/fundo_app</item>
+        <item name="android:windowBackground">@color/fundo_app</item>
+    </style>
+</resources>

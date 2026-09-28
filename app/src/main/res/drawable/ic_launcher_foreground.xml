@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Primeiro plano do ícone adaptável: mira + inseto (desenhado para este app) -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- anel da mira -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M25.8,54 A28.2,28.2 0 0 1 82.2,54 A28.2,28.2 0 0 1 25.8,54 Z"
+        android:strokeColor="@color/verde_mira"
+        android:strokeLineCap="round"
+        android:strokeWidth="3.6" />
+
+    <!-- marcas da mira -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M54,20.4 L54,28.2 M54,79.8 L54,87.6 M20.4,54 L28.2,54 M79.8,54 L87.6,54"
+        android:strokeColor="@color/verde_mira"
+        android:strokeLineCap="round"
+        android:strokeWidth="3.6" />
+
+    <!-- corpo do inseto -->
+    <path
+        android:fillColor="@color/verde_neon"
+        android:pathData="M46.2,59.4 A7.8,9 0 0 1 61.8,59.4 A7.8,9 0 0 1 46.2,59.4 Z" />
+    <path
+        android:fillColor="@color/verde_neon"
+        android:pathData="M49.2,48.6 A4.8,4.2 0 0 1 58.8,48.6 A4.8,4.2 0 0 1 49.2,48.6 Z" />
+    <path
+        android:fillColor="@color/verde_neon"
+        android:pathData="M51,42.6 A3,3 0 0 1 57,42.6 A3,3 0 0 1 51,42.6 Z" />
+
+    <!-- patas -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M47.4,52.8 L40.8,48 M46.5,59.4 L39.6,59.4 M47.4,66 L40.8,70.8 M60.6,52.8 L67.2,48 M61.5,59.4 L68.4,59.4 M60.6,66 L67.2,70.8"
+        android:strokeColor="@color/verde_neon"
+        android:strokeLineCap="round"
+        android:strokeWidth="2.7" />
+
+    <!-- antenas -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M51.9,39.9 L49.2,35.4 M56.1,39.9 L58.8,35.4"
+        android:strokeColor="@color/verde_neon"
+        android:strokeLineCap="round"
+        android:strokeWidth="2.4" />
+</vector>

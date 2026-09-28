@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Identidade do aplicativo -->
+    <string name="nome_app">BugHunter — Central de Bugs</string>
+    <string name="subtitulo_app">Detector de falhas em sistemas</string>
+    <string name="descricao_logo">Ícone do BugHunter: mira de caçador sobre um inseto</string>
+
+    <!-- Formulário de cadastro -->
+    <string name="hint_titulo">Título do problema</string>
+    <string name="hint_modulo">Módulo ou tela afetada</string>
+    <string name="hint_descricao">Descrição do erro (mínimo 10 caracteres)</string>
+    <string name="rotulo_gravidade">Gravidade</string>
+    <string name="botao_registrar">Registrar bug</string>
+
+    <!-- Validação -->
+    <string name="erro_titulo">Informe o título do problema</string>
+    <string name="erro_modulo">Informe o módulo onde o problema ocorreu</string>
+    <string name="erro_descricao">A descrição precisa ter pelo menos 10 caracteres</string>
+
+    <!-- Níveis de gravidade (índice = gravidade - 1) -->
+    <string-array name="niveis_gravidade">
+        <item>baixa</item>
+        <item>baixa</item>
+        <item>média</item>
+        <item>alta</item>
+        <item>crítica</item>
+    </string-array>
+
+    <!-- Painel de acompanhamento -->
+    <string name="painel_total">Total</string>
+    <string name="painel_abertos">Abertos</string>
+    <string name="painel_corrigidos">Corrigidos</string>
+    <string name="painel_pontos">Pontos</string>
+    <string name="pontos_formato">%1$d pts</string>
+
+    <!-- Lista vazia -->
+    <string name="mensagem_lista_vazia">Nenhum bug registrado. O sistema parece perfeito... por enquanto!</string>
+
+    <!-- Cartão do bug -->
+    <string name="status_aberto">Aberto</string>
+    <string name="status_corrigido">Corrigido</string>
+    <string name="card_modulo_format">Módulo: %1$s</string>
+    <string name="gravidade_formato">Gravidade: %1$d — %2$s</string>
+    <string name="imagem_gravidade_padrao">Ícone de gravidade do bug</string>
+    <string name="imagem_gravidade_descricao">Ícone de gravidade %1$d, nível %2$s</string>
+
+    <!-- Mensagens ao usuário -->
+    <string name="bug_removido_format">Bug removido: %1$s — %2$s</string>
+
+    <!-- Autoria -->
+    <string name="rodape_autoria">© 2026 João Pedro G M Silva — Matrícula 20251012000740 — ADS PUC Goiás</string>
+</resources>

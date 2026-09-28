@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- BugHunter: mira de caçador (anel + miras) sobre um inseto -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="40dp"
+    android:height="40dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- anel da mira -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M2.6,12 A9.4,9.4 0 0 1 21.4,12 A9.4,9.4 0 0 1 2.6,12 Z"
+        android:strokeColor="@color/verde_mira"
+        android:strokeLineCap="round"
+        android:strokeWidth="1.2" />
+
+    <!-- marcas da mira (norte, sul, leste, oeste) -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M12,0.8 L12,3.4 M12,20.6 L12,23.2 M0.8,12 L3.4,12 M20.6,12 L23.2,12"
+        android:strokeColor="@color/verde_mira"
+        android:strokeLineCap="round"
+        android:strokeWidth="1.2" />
+
+    <!-- corpo do inseto -->
+    <path
+        android:fillColor="@color/verde_neon"
+        android:pathData="M9.4,13.8 A2.6,3 0 0 1 14.6,13.8 A2.6,3 0 0 1 9.4,13.8 Z" />
+    <path
+        android:fillColor="@color/verde_neon"
+        android:pathData="M10.4,10.2 A1.6,1.4 0 0 1 13.6,10.2 A1.6,1.4 0 0 1 10.4,10.2 Z" />
+    <path
+        android:fillColor="@color/verde_neon"
+        android:pathData="M11,8.2 A1,1 0 0 1 13,8.2 A1,1 0 0 1 11,8.2 Z" />
+
+    <!-- patas -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M9.8,11.6 L7.6,10 M9.5,13.8 L7.2,13.8 M9.8,16 L7.6,17.6 M14.2,11.6 L16.4,10 M14.5,13.8 L16.8,13.8 M14.2,16 L16.4,17.6"
+        android:strokeColor="@color/verde_neon"
+        android:strokeLineCap="round"
+        android:strokeWidth="0.9" />
+
+    <!-- antenas -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:pathData="M11.3,7.3 L10.4,5.8 M12.7,7.3 L13.6,5.8"
+        android:strokeColor="@color/verde_neon"
+        android:strokeLineCap="round"
+        android:strokeWidth="0.8" />
+</vector>
