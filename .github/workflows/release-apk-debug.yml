@@ -1,0 +1,62 @@
+name: Release APK (debug)
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Tag da release (ex.: v0.1.0). Obrigatório quando o ref não é uma tag v*."
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - uses: gradle/actions/setup-gradle@v4
+
+      - name: Assemble debug APK
+        run: chmod +x gradlew && ./gradlew :app:assembleDebug --no-daemon
+
+      - name: Rename APK
+        env:
+          INPUT_TAG: ${{ github.event.inputs.tag }}
+        run: |
+          if [ -n "$INPUT_TAG" ]; then
+            TAG="$INPUT_TAG"
+          else
+            TAG="$GITHUB_REF_NAME"
+          fi
+          case "$TAG" in
+            v*) ;;
+            *)
+              echo "Tag inválida: '$TAG'. Dispare numa tag v* ou informe o input tag." >&2
+              exit 1
+              ;;
+          esac
+          echo "TAG=$TAG" >> "$GITHUB_ENV"
+          SRC=$(find app/build/outputs/apk/debug -name '*.apk' -print -quit)
+          if [ -z "$SRC" ]; then
+            echo "Nenhum APK em app/build/outputs/apk/debug" >&2
+            exit 1
+          fi
+          cp "$SRC" "BugHunter-CentralDeBugs-${TAG}-debug.apk"
+
+      - name: Attach APK to GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ env.TAG }}
+          files: BugHunter-CentralDeBugs-${{ env.TAG }}-debug.apk
+          fail_on_unmatched_files: true
